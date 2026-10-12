@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    environment:
+      TARGET_REPO: /app/sample_repo
+      LLM_MODE: mock
+    ports:
+      - "127.0.0.1:8000:8000"
+  frontend:
+    build: .
+    command: ["streamlit", "run", "frontend/app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "127.0.0.1:8501:8501"
+    depends_on: [api]

@@ -1,0 +1,2 @@
+{"id": "synthetic-issue-001", "title": "Check zero handling in calculator", "body": "Verify safe_double(0) returns zero and add a focused regression test.", "source": "original CC0 synthetic issue"}
+{"id": "synthetic-issue-002", "title": "Document calculator input contracts", "body": "Explain expected behavior for negative inputs in source documentation.", "source": "original CC0 synthetic issue"}
